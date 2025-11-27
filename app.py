@@ -14,7 +14,7 @@ try:
     API_KEY = st.secrets["GOOGLE_API_KEY"]
     genai.configure(api_key=API_KEY)
     # AI 모델 로드 (개인화된 설명 생성용)
-    model = genai.GenerativeModel('gemini-1.5-flash-latest')
+    model = genai.GenerativeModel('gemini-1.5-flash')
 except Exception:
     st.warning("AI 엔진 연결 경고: 개인화된 설명 생성 기능이 제한됩니다. (API 키 확인 필요)")
     model = None
